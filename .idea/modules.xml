@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fingger_print/fingger_print.iml" filepath="$PROJECT_DIR$/fingger_print/fingger_print.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhongzheng_Fingerprint.iml" filepath="$PROJECT_DIR$/zhongzheng_Fingerprint.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Fingerprint_demoActivity!</string>
+    <string name="app_name">Fingerprint</string>
+    <string name="btn_reg">Register</string>
+    <string name="btn_query">Query</string>
+    <string name="btn_image">GetImage</string>
+    <string name="btn_scan">Scan</string>
+    <string name="btn_cancle">Cancel</string>
+    <string name="btn_del">Delete</string>
+    <string name="btn_loop">Loop</string>
+    <string name="str_null"></string>
+
+</resources>
