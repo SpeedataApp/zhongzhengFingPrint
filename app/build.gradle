@@ -10,7 +10,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a"
+//        }
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -39,7 +43,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.2.0'
-//    compile project(':fingger_print')
+    compile project(':fingger_print')
     testCompile 'junit:junit:4.12'
-    compile files('libs/finger_print.jar')
 }

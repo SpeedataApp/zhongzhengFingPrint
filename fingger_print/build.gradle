@@ -11,7 +11,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a"
+//        }
     }
     buildTypes {
         release {
@@ -20,24 +22,20 @@ android {
         }
     }
 }
-task makeJar(type: org.gradle.api.tasks.bundling.Jar) {
-    baseName 'finger_print'//起名字
-    //删除存在的
-    delete 'build/libs/finger_print.jar'
-    //设置拷贝的文件
-    from('build/intermediates/classes/release/')
-    //打进jar包后的文件目录，into不写，不然包名不对
-    //into('')
-    //include ,exclude参数来设置过滤
-    //（我们只关心classes.jar这个文件）
-    //include('classes.jar')//不要用classes，不然可能会有文件冲突
-    //重命名
-    //rename ('classes.jar', 'MiMsgSdk.jar')
+task buildJar(type: Jar, dependsOn: ['build']) {
+//导出的jar文件名称
+    archiveName = 'finger.jar'
+//从哪个目录打包jar
+    from('build/intermediates/classes/debug')
+//导出的jar文件的存放目录（未指定则默认存放在build/libs下）
+//去掉不要的类
+    exclude('com/camare/fingger_print/BuildConfig.class')
+    exclude('com/camare/fingger_print/BuildConfig\$*.class')
+    exclude('**/R.class')
+    exclude('**/R\$*.class')
 }
 
-makeJar.dependsOn(build)
-//在终端执行生成JAR包
-// ./gradlew makeJar
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

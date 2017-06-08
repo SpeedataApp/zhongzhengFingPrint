@@ -24,7 +24,6 @@ import android.widget.ToggleButton;
 
 import com.android.fplibs.DeviceControl;
 import com.android.fplibs.fingerprint_native;
-import com.serialport.SerialPort;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -49,7 +48,6 @@ public class Fingerprint_demoActivity extends Activity implements OnClickListene
     private WakeLock wK = null;
 
     private static final String TAG = "FingerPrintDemo";
-    SerialPort serialPort;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

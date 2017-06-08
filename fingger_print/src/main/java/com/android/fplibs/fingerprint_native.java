@@ -1,13 +1,12 @@
 package com.android.fplibs;
 
+import android.serialport.SerialPort;
 import android.util.Log;
-
-import com.serialport.SerialPort;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import static com.serialport.SerialPort.SERIAL_TTYMT1;
+import static android.serialport.SerialPort.SERIAL_TTYMT1;
 
 
 public class fingerprint_native {
