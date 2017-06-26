@@ -335,6 +335,7 @@ public class Fingerprint_demoActivity extends Activity implements OnClickListene
 
     }
 
+
     class LoopFPDialog extends Dialog implements android.view.View.OnClickListener, OnCheckedChangeListener {
 
         private ToggleButton bt;
