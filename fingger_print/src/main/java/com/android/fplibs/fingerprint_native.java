@@ -6,7 +6,6 @@ import android.util.Log;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import static android.serialport.SerialPort.SERIAL_TTYMT1;
 
 
 public class fingerprint_native {
@@ -62,7 +61,7 @@ public class fingerprint_native {
     public void OpenSerialPort() {
         serialPort = new SerialPort();
         try {
-            serialPort.OpenSerial(SERIAL_TTYMT1, 57600);
+            serialPort.OpenSerial(SerialPort.SERIAL_TTYMT2, 57600);
             fd=serialPort.getFd();
         } catch (IOException e) {
             e.printStackTrace();

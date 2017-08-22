@@ -45,5 +45,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile project(':fingger_print')
     testCompile 'junit:junit:4.12'
-    compile files('libs/deivice-1.4.8-sources.jar')
 }
